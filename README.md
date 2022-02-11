@@ -1,27 +1,59 @@
-# GithubSearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
+# github-search
 
-## Development server
+github-search is a web application that allows users to preview my github profile and as well search for other github users.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+Install github-search application with npm
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+  npm install github-search
+  cd github-search
+```
+### Clone this repository
+```bash
+ git clone git@github.com:John-Kimani/Quote-App.git
+ cd github-search
+ code .
+ ng serve --open
+```
+## Features and BDD
 
-## Running unit tests
+- This application previews my github account profile.
+- Users can search and find other github profiles.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Deployment
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+To deploy this project run
 
-## Further help
+```bash
+  npm run deploy
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Live Link
+[github-search]()
+
+## Technology Used
+
+**Framework:** Angular version 13.2.0
+
+### Developed with
+**Structure:** Bootstrap, HTML
+**Behaviour:** Typescript
+**Style:** CSS
+## Color Reference
+
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Floral White | ![#fffbf0](https://via.placeholder.com/10/fffbf0?text=+) #fffbf0 |
+
+
+
+## Author
+
+Design and developed by: [@John-Kimani](https://github.com/John-Kimani)
+
