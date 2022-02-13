@@ -16,7 +16,7 @@ export class ReposerviceService {
   }
   fetchRepositories(){
     let promise = new Promise((resolve, reject) =>{
-      this.http.get<any>(this.url+this.username + '/repos' ).toPromise().then(
+      this.http.get<any>(this.url + this.username + '/repos' ).toPromise().then(
         response =>{
           response.forEach((response:any) => {
             this.repos = new Repo('', '','','','')

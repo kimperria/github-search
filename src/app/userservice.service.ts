@@ -7,17 +7,19 @@ import { User } from './user';
 })
 export class UserserviceService {
 
-  username: string;
-  user = new User("","","", 0, 0,"","")
+  username: any;
+  user!: User
   url = "https://api.github.com/users/"
 
 
-  constructor(private http: HttpClient) { 
+
+  constructor(public http: HttpClient) { 
     this.username = "John-Kimani";
+    this.user = new User("","","", 0, 0,"","")
   }
   fetchPersonalInfomation(){
     let promise = new Promise((resolve,reject) => {
-      this.http.get<any>(this.url+this.username).toPromise().then(
+      this.http.get<any>(this.url + this.username).toPromise().then(
         response => {
           this.user.image = response.avatar_url
           this.user.username = response.name

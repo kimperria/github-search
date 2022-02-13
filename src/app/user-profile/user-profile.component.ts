@@ -11,7 +11,7 @@ export class UserProfileComponent implements OnInit {
 
   user!: User;
 
-  constructor(private userservice:UserserviceService) { }
+  constructor(public userservice:UserserviceService) { }
 
   ngOnInit(): void {
     this.userservice.fetchPersonalInfomation()
