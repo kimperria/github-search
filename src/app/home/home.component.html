@@ -3,17 +3,16 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img [src]="user.image" class="card-img-top" alt="">
                     <div class="card-body">
-                      <h5 class="card-title">{{user.githubName}}</h5>
-                      <h5>{{user.username}}</h5>
+                      <h5 class="card-title">{{user.username}}</h5>
                       <p class="card-text">{{user.bio}}</p>
                       <div class="row">
                           <div class="col">{{user.followers}} followers</div>
                           <div class="col">{{user.following}} following</div>
                       </div>
-                      <p class="card-text">{{user.location.city}}, {{user.location.country}}</p>
-                      <p class="card-text">{{user.social}}</p>
+                      <p class="card-text">{{user.location}}</p>
+                      <p class="card-text">{{user.twitter}}</p>
                     </div>
                   </div>
             </div>
