@@ -8,7 +8,7 @@ import { Repo } from './repo';
 export class ReposerviceService {
 
   username = 'John-Kimani';
-  repos = new Repo('', '')
+  repos = new Repo('', '', '', '','')
   repositories:any[] = []
   url = "https://api.github.com/users/"
   constructor(private http: HttpClient) { 
@@ -19,9 +19,12 @@ export class ReposerviceService {
       this.http.get<any>(this.url+this.username + '/repos' ).toPromise().then(
         response =>{
           response.forEach((response:any) => {
-            this.repos = new Repo('', '')
+            this.repos = new Repo('', '','','','')
             this.repos.name = response.name
             this.repos.full_name = response.full_name
+            this.repos.description = response.description
+            this.repos.created_at = response.created_at
+            this.repos.html_url = response.html_url
             this.repositories.push(this.repos)
           });
           
