@@ -9,7 +9,7 @@
                 <div class="card-footer" id="footer">
                     <div class="row">
                         <div class="col-6">
-                            <span>{{repo.created_at}}</span>
+                           <p>Created on: <span>{{repo.created_at | date}}</span></p>
                         </div>
                         <div class="col-6">
                             <a href="{{repo.html_url}}" class="btn ms-5" id="view">View Repo</a>
