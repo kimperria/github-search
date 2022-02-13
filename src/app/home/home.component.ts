@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
+import { UserserviceService } from '../userservice.service';
 
 @Component({
   selector: 'app-home',
@@ -8,29 +9,13 @@ import { User } from '../user';
 })
 export class HomeComponent implements OnInit {
 
-  //user information
-  user: User;
+  user!: User;
 
+  constructor(private userservice:UserserviceService) {
 
-
-  constructor() {
-    this.user = {
-      githubName: 'John Kimani',
-      username: 'John-Kimani',
-      bio: 'Apples and more apples',
-      followers: 34,
-      following:  25,
-      location:{
-        city: 'Nairobi',
-        country: 'Kenya'
-      },
-      social: '@kimperria'
-   }
-
-
-
-}
-ngOnInit(): void {
-
-}
+  }
+  ngOnInit(): void {
+    this.userservice.fetchPersonalInfomation()
+    this.user = this.userservice.user
+  }
 }
