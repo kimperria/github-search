@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserRepositoriesComponent } from './user-repositories/user-repositories.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { UserRepositoriesComponent } from './user-repositories/user-repositories
     HeaderComponent,
     HomeComponent,
     UserProfileComponent,
-    UserRepositoriesComponent
+    UserRepositoriesComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
