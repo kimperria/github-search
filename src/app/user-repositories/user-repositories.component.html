@@ -1,18 +1,18 @@
 <section>
     <div class="row">
         <div *ngFor="let repo of repos" class="col-md-6">     
-            <div class="card border-success mt-5">
+            <div class="card mt-5">
                 <div class="card-body">
                     <h5>{{repo.name}}</h5>
                     <p>{{repo.description}}</p>
                 </div>
-                <div class="card-footer">
+                <div class="card-footer" id="footer">
                     <div class="row">
                         <div class="col-6">
                             <span>{{repo.created_at}}</span>
                         </div>
                         <div class="col-6">
-                            <a href="{{repo.html_url}}" class="btn btn-primary ms-5">View Repo</a>
+                            <a href="{{repo.html_url}}" class="btn ms-5" id="view">View Repo</a>
                         </div>
                     </div>
                 </div>

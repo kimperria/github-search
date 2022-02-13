@@ -2,12 +2,13 @@
     <div class="container container-fluid">
         <div class="row">
             <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card" id="profile">
                     <img [src]="user.image" class="card-img-top" alt="">
                     <div class="card-body">
                       <h5 class="card-title">{{user.username}}</h5>
                       <p class="card-text">{{user.bio}}</p>
                       <div class="row">
+                        <i class="fa-light fa-user-group"></i>
                           <div class="col">{{user.followers}} followers</div>
                           <div class="col">{{user.following}} following</div>
                       </div>
