@@ -1,20 +1,35 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { User } from './user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserserviceService {
 
-  private username: string;
-  httpClient: any;
+  username: string;
+  user = new User("","", 0, 0,"","")
+  url = "https://api/github/users/"
+
 
   constructor(private http: HttpClient) { 
     this.username = "John-Kimani";
   }
   fetchPersonalInfomation(){
-    return this.httpClient.get('https://api/github/users/'+this.username).map((response: any)=>{
-      return response
+    let promise = new Promise((resolve,reject) => {
+      this.http.get<any>(this.url+this.username).toPromise().then(
+        response => {
+          this.user.username = response.name
+          this.user.bio = response.bio
+          this.user.followers = response.followers
+          this.user.following = response.following
+          this.user.location = response.location
+          this.user.twitter = response.twitter_username
+        }, error =>{
+          console.log("Error!!")
+        }
+      )
     })
+    return promise
   }
 }
