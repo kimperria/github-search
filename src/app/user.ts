@@ -1,13 +1,15 @@
 export class User {
     //properties
-    githubName: any;
-    username: any;
-    bio: any;
-    followers: any;
-    following: any;
-    location!: {
-        city: any;
-        country: any;
-    };
-    social: any
+    constructor(
+    //    public githubName: any,
+       public image: any,
+       public username: any,
+       public bio: string,
+       public followers: number,
+       public following: number,
+       public location: string,
+       public twitter: string
+    ){
+
+    }
 }
