@@ -1,16 +1,23 @@
 <section class="home"> 
     <div class="container container-fluid">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="card" style="width: 18rem;">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5 class="card-title">{{user.githubName}}</h5>
+                      <h5>{{user.username}}</h5>
+                      <p class="card-text">{{user.bio}}</p>
+                      <div class="row">
+                          <div class="col">{{user.followers}} followers</div>
+                          <div class="col">{{user.following}} following</div>
+                      </div>
+                      <p class="card-text">{{user.location.city}}, {{user.location.country}}</p>
+                      <p class="card-text">{{user.social}}</p>
                     </div>
                   </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <!-- user repos -->
             </div>
         </div>
