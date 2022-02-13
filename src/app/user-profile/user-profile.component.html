@@ -1,0 +1,26 @@
+<section class="home"> 
+    <div class="container container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img [src]="user.image" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">{{user.username}}</h5>
+                      <p class="card-text">{{user.bio}}</p>
+                      <div class="row">
+                          <div class="col">{{user.followers}} followers</div>
+                          <div class="col">{{user.following}} following</div>
+                      </div>
+                      <p class="card-text">{{user.location}}</p>
+                      <p class="card-text">{{user.twitter}}</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-8">
+                <!-- user repos -->
+            </div>
+        </div>
+
+    </div>
+</section>
+
