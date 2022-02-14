@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserRepositoriesComponent } from './user-repositories/user-repositories.component';
 import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SearchComponent } from './search/search.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

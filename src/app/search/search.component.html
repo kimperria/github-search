@@ -1,14 +1,56 @@
 <section class="container container-fluid">
     <h4>Search other github users</h4>
-    <form>
+    <form #searchForm="ngForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="name">Username</label>
         </div>
         <div class="row form-group">   
-            <input class="col-md-8" type="text" placeholder="github username">
+            <input class="col-md-8" [(ngModel)]="newusername" name="newusername" type="text" placeholder="github username" required>
             <div class="col-md-2">
-                <button class="btn search-btn">Search</button>
+                <button type="submit" class="btn search-btn">Search</button>
             </div>
         </div>
     </form>
+</section>
+
+
+<section class="container container-fluid">
+    <div class="col-md-3 mt-4">
+        <div class="card" id="profile">
+            <img [src]="information.image" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">{{information.username}}</h5>
+              <p class="card-text">{{information.bio}}</p>
+              <div class="row">
+                <i class="fa-light fa-user-group"></i>
+                  <div class="col">{{information.followers}} followers</div>
+                  <div class="col">{{information.following}} following</div>
+              </div>
+              <p class="card-text">{{information.location}}</p>
+              <p class="card-text">{{information.twitter}}</p>
+            </div>
+          </div>
+    </div>
+
+    <!-- <div class="col-md-6">
+        <div *ngFor="let repos for information" class="col-md-6">     
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h5>{{repos.name}}</h5>
+                    <p>{{repos.description}}</p>
+                </div>
+                <div class="card-footer" id="footer">
+                    <div class="row">
+                        <div class="col-6">
+                           <p>Created on: <span>{{repos.created_at | date}}</span></p>
+                        </div>
+                        <div class="col-6">
+                            <a href="{{repos.html_url}}" class="btn ms-5" id="view">View Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
 </section>
