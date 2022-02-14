@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from './user';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +11,12 @@ export class UserserviceService {
   username: any;
   user!: User
   url = "https://api.github.com/users/"
+  apiToken = ""
 
 
 
   constructor(public http: HttpClient) { 
-    this.username = "John-Kimani";
+    this.username = "John-Kimani?access_token=";
     this.user = new User("","","", 0, 0,"","")
   }
   fetchPersonalInfomation(){
