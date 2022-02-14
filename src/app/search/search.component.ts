@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../user';
-import { Repo } from '../repo';
-import { UserserviceService } from '../userservice.service';
-import { ReposerviceService } from '../reposervice.service';
+import { Form } from '../form';
+import { FormserviceService } from '../formservice.service';
 
 @Component({
   selector: 'app-search',
@@ -11,19 +9,15 @@ import { ReposerviceService } from '../reposervice.service';
 })
 export class SearchComponent implements OnInit {
 
-  user!: User;
-  repo!: Repo;
-
+  information!: Form;
+  
   constructor(
-    public userService: UserserviceService,
-    public reposervice:ReposerviceService
+    private formservice: FormserviceService
   ) { }
 
   ngOnInit(): void {
-    
+    this.formservice.findNewUser()
+    this.information = this.formservice.person
   }
-  findUsers(){
-    this.user = this.userService.user
-    console.log(this.user)
-  }
+
 }
