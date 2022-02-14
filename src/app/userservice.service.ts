@@ -11,13 +11,14 @@ export class UserserviceService {
   username: any;
   user!: User
   url = "https://api.github.com/users/"
-  apiToken = ""
+  apiToken: any;
 
 
 
   constructor(public http: HttpClient) { 
-    this.username = "John-Kimani?access_token=";
+    this.username = "John-Kimani";
     this.user = new User("","","", 0, 0,"","")
+    this.apiToken = ''
   }
   fetchPersonalInfomation(){
     let promise = new Promise((resolve,reject) => {
@@ -30,8 +31,9 @@ export class UserserviceService {
           this.user.following = response.following
           this.user.location = response.location
           this.user.twitter = response.twitter_username
+          resolve(console.log("User can be fetched"))
         }, error =>{
-          console.log("Error!!")
+         reject(console.log("User cant be fetched")) 
         }
       )
     })

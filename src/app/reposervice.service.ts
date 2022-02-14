@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Repo } from './repo';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ import { Repo } from './repo';
 export class ReposerviceService {
 
   username = 'John-Kimani';
+  apiToken: any;
   repos = new Repo('', '', '', '','')
   repositories:any[] = []
   url = "https://api.github.com/users/"
