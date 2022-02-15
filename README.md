@@ -3,8 +3,13 @@
 
 github-search is a web application that allows users to preview my github profile and as well search for other github users.
 
+## Screenshot
 
+![git-search-app](./src/assets/images/github-search-app.png)
 
+## Known Bug
+### Importance notice
+Home page (component) is still under maintanance, Kindly navigate to other pages using the above navbar provided.
 ## Installation
 
 Install github-search application with npm
@@ -35,7 +40,7 @@ To deploy this project run
 ```
 
 ### Live Link
-[github-search]()
+[github-search](https://john-kimani.github.io/github-search/)
 
 ## Technology Used
 
