@@ -11,18 +11,18 @@ export class UserserviceService {
   username: any;
   user!: User
   url = "https://api.github.com/users/"
-  apiToken: any;
+  // apiToken: any;
 
 
 
   constructor(public http: HttpClient) { 
     this.username = "John-Kimani";
     this.user = new User("","","", 0, 0,"","")
-    this.apiToken = ''
+    // this.apiToken = ''
   }
   fetchPersonalInfomation(){
     let promise = new Promise((resolve,reject) => {
-      this.http.get<any>(this.url + this.username).toPromise().then(
+      this.http.get<any>(this.url + this.username + "?access_token'=" + environment.apiToken).toPromise().then(
         response => {
           this.user.image = response.avatar_url
           this.user.username = response.name

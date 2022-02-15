@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { fetchedRepos, Form } from './form';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class FormserviceService {
 
    findNewUser(){
     let newUser = new Promise((resolve, reject) =>{
-      this.http.get<any>(this.link + this.username).toPromise().then(
+      this.http.get<any>(this.link + this.username + "?access_token'=" + environment.apiToken).toPromise().then(
         (        response: { avatar_url: any; name: any; bio: any; followers: any; following: any; location: any; twitter_username: string}) =>{
           this.person.image = response.avatar_url
           this.person.username = response.name
